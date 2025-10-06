@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DocAtHome — Welcome</title>
+  <meta name="description" content="DocAtHome — secure telehealth for patients, caregivers and doctors." />
+  <style>
+    :root{--bg:#f6fbff;--card:#ffffff;--accent:#1366d6;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg),#e9f2ff);color:#0b1220}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:3rem}
+    .card{max-width:920px;width:100%;background:var(--card);border-radius:18px;padding:2.25rem;box-shadow:0 8px 30px rgba(12,35,64,0.08)}
+    header{display:flex;gap:1rem;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3aa0ff);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.9rem;margin:.2rem 0;color:var(--accent)}
+    p.lead{margin:0 0 1.25rem;color:var(--muted);line-height:1.5}
+    .cta{display:flex;gap:.75rem;flex-wrap:wrap}
+    .btn{padding:.7rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;color:var(--accent);border:1px solid rgba(19,102,214,.12)}
+    footer{margin-top:1.4rem;color:var(--muted);font-size:.88rem}
+    @media (max-width:640px){.card{padding:1rem}.logo{width:48px;height:48px}.cta{justify-content:center}}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <article class="card" aria-labelledby="site-title">
+      <header>
+        <div class="logo" aria-hidden="true">DA</div>
+        <div>
+          <div style="font-size:.95rem;color:var(--muted)">DocAtHome</div>
+          <h1 id="site-title">Healthcare — from the comfort of home</h1>
+        </div>
+      </header>
+
+      <p class="lead">
+        Welcome to the DocAtHome proof-of-concept. Secure video visits, caregiver support, and a simple booking flow — built with privacy and accessibility in mind.
+      </p>
+
+      <div class="cta" role="group" aria-label="Primary actions">
+        <a class="btn btn-primary" href="/signup" title="Get started">Get started</a>
+        <a class="btn btn-ghost" href="/login" title="Sign in">Sign in</a>
+        <a class="btn" href="#about" style="background:#eef6ff;color:#0b1220">Learn more</a>
+      </div>
+
+      <section id="about" style="margin-top:1.25rem">
+        <h2 style="font-size:1.05rem;margin:0 0 .5rem">Why DocAtHome?</h2>
+        <ul style="margin:0;color:var(--muted);line-height:1.6">
+          <li>Secure video consultations (HIPAA/PIPEDA-ready architecture)</li>
+          <li>Simple caregiver workflows and appointment booking</li>
+          <li>Designed for accessibility and privacy by default</li>
+        </ul>
+      </section>
+
+      <footer>
+        © <span id="year"></span> DocAtHome · Demo site
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
