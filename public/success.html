@@ -3,46 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appointment Submitted - DoctorAtHome</title>
+  <title>Success - DoctorAtHome</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      text-align: center;
+      background: radial-gradient(circle at top, #0d1117, #000);
+      color: #e6edf3;
       margin: 0;
-      background-color: #f9f9f9;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .container {
-      margin-top: 100px;
-    }
-    h1 {
-      color: #2e7d32;
-    }
-    p {
-      font-size: 18px;
-      color: #333;
-    }
-    a.btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
       background: linear-gradient(90deg, #0078d7, #00bfa5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 25px rgba(0,191,165,0.6);
+      animation: glow 2s infinite alternate;
+    }
+
+    .checkmark svg {
+      width: 50px;
+      height: 50px;
+      stroke: white;
+      stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 80;
+      stroke-dashoffset: 80;
+      animation: draw 1s ease forwards;
+    }
+
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px rgba(0,191,165,0.4); }
+      to { box-shadow: 0 0 25px rgba(0,191,165,0.9); }
+    }
+
+    h1 {
+      margin-top: 25px;
+      font-size: 2rem;
+      color: #58a6ff;
+    }
+
+    p {
+      color: #c9d1d9;
+      max-width: 500px;
+      margin: 10px auto 30px;
+      font-size: 1.1rem;
+    }
+
+    a {
+      background: linear-gradient(90deg, #0078d7, #00bfa5);
+      padding: 12px 25px;
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      transition: 0.3s;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
-    a.btn:hover {
-      background: linear-gradient(90deg, #005fa3, #009e8f);
+
+    a:hover {
+      box-shadow: 0 0 15px rgba(0,191,165,0.6);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>✅ Appointment Submitted!</h1>
-    <p>Thank you for booking with <strong>DoctorAtHome</strong>.<br>Your details have been securely saved, and one of our healthcare professionals will contact you shortly.</p>
-    <a href="index.html" class="btn">Return to Home</a>
+
+  <div class="checkmark">
+    <svg viewBox="0 0 52 52">
+      <path d="M14 27l7 7 17-17" />
+    </svg>
   </div>
+
+  <h1>Appointment Booked Successfully!</h1>
+  <p>Thank you for choosing DoctorAtHome. One of our medical professionals will contact you shortly to confirm your appointment details.</p>
+
+  <a href="index.html">Back to Home</a>
+
 </body>
 </html>
