@@ -9,42 +9,35 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #f5f9ff;
-      color: #333;
+      background: #0d1117;
+      color: #e6edf3;
     }
 
-    /* Header Section */
     header {
-      background: linear-gradient(90deg, rgba(0,120,215,0.9), rgba(0,191,165,0.9)), 
+      background: linear-gradient(90deg, rgba(0,90,150,0.9), rgba(0,180,150,0.9)), 
                   url('https://images.unsplash.com/photo-1580281657521-3898a2a2c4b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 80px 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     header h1 {
-      margin: 0;
       font-size: 3rem;
+      margin: 0;
     }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    /* Navigation */
     nav {
       text-align: center;
-      background-color: white;
+      background: #161b22;
       padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #0078d7;
+      color: #58a6ff;
       font-weight: 600;
       transition: color 0.3s;
     }
@@ -53,95 +46,74 @@
       color: #00bfa5;
     }
 
-    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #ffffff 40%, #e6f0ff);
+      padding: 100px 20px;
+      background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
     }
 
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #0078d7;
+      color: #58a6ff;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      color: #444;
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 20px auto;
+      color: #c9d1d9;
     }
 
     .btn {
       background: linear-gradient(90deg, #0078d7, #00bfa5);
       color: white;
-      padding: 12px 25px;
+      padding: 12px 30px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
       background: linear-gradient(90deg, #005fa3, #009e8f);
+      box-shadow: 0 0 12px rgba(0,191,165,0.5);
     }
 
-    /* Services Section */
     .cards {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
-      margin: 60px auto;
-      max-width: 1200px;
-      padding: 0 20px;
+      padding: 60px 20px;
+      background: #0d1117;
     }
 
     .card {
-      background: white;
+      background: #161b22;
+      color: #e6edf3;
       padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       text-align: center;
-      flex: 1 1 300px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .card h3 {
-      color: #0078d7;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 0.95rem;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,191,165,0.3);
     }
 
     .card img {
-      width: 80px;
-      height: 80px;
+      width: 70px;
       margin-bottom: 15px;
-      border-radius: 50%;
-      object-fit: cover;
+      filter: brightness(0.9);
     }
 
     footer {
       text-align: center;
-      background: #0078d7;
-      color: white;
-      padding: 15px 0;
-      margin-top: 50px;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 14px;
+      background: #161b22;
+      padding: 20px 0;
+      color: #8b949e;
     }
   </style>
 </head>
@@ -149,7 +121,7 @@
 
   <header>
     <h1>DoctorAtHome</h1>
-    <p>Your trusted healthcare partner, anytime, anywhere</p>
+    <p>Your trusted healthcare partner, 24/7</p>
   </header>
 
   <nav>
@@ -161,26 +133,26 @@
   </nav>
 
   <section class="hero">
-    <h1>Healthcare, Simplified</h1>
-    <p>Book online consultations, home visits, and lab tests — all from the comfort of your home. Your health is our priority.</p>
+    <h1>Healthcare, Reimagined</h1>
+    <p>Book appointments, get online consultations, and access lab services — all from the comfort of your home.</p>
     <a href="patient-form.html" class="btn">Book an Appointment</a>
   </section>
 
   <div class="cards">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Online Consultation">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Consultation">
       <h3>Online Consultations</h3>
-      <p>Speak with licensed doctors securely via video call — no waiting rooms, no hassle.</p>
+      <p>Get expert advice through secure video sessions with licensed professionals.</p>
     </div>
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320389.png" alt="Home Visits">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320389.png" alt="Home Visit">
       <h3>Home Visits</h3>
-      <p>Our healthcare professionals provide personalized care in the comfort of your home.</p>
+      <p>Healthcare delivered to your doorstep — comfort meets care.</p>
     </div>
     <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/4320/4320342.png" alt="Lab Tests">
       <h3>Lab Tests</h3>
-      <p>Book lab tests from your couch and have samples collected right at your doorstep.</p>
+      <p>Book diagnostics and get samples collected without leaving your home.</p>
     </div>
   </div>
 
