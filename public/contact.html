@@ -3,31 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | DoctorAtHome</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contact Us - DoctorAtHome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { background: #0d1117; color: #e6edf3; font-family: 'Poppins', sans-serif; margin: 0; }
+    header { background: linear-gradient(90deg, #0078d7, #00bfa5); text-align: center; padding: 70px 20px; color: white; }
+    nav { text-align: center; background: #161b22; padding: 15px; }
+    nav a { margin: 0 15px; color: #58a6ff; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #00bfa5; }
+
+    .contact {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #161b22;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    h2 { text-align: center; color: #58a6ff; }
+    label { display: block; margin: 15px 0 5px; font-weight: 600; }
+    input, textarea {
+      width: 100%; padding: 12px; border-radius: 8px; border: none;
+      background: #0d1117; color: #e6edf3; outline: none;
+    }
+    textarea { resize: vertical; height: 120px; }
+    button {
+      background: linear-gradient(90deg, #0078d7, #00bfa5);
+      border: none; color: white; padding: 12px 25px; border-radius: 8px;
+      margin-top: 15px; cursor: pointer; font-weight: 600;
+      transition: all 0.3s;
+    }
+    button:hover { box-shadow: 0 0 15px rgba(0,191,165,0.6); }
+
+    footer { text-align: center; background: #161b22; padding: 20px; color: #8b949e; margin-top: 60px; }
+  </style>
 </head>
 <body>
-  <header><h1>Contact DoctorAtHome</h1></header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you — our team is available 24/7</p>
+</header>
 
-  <div class="container">
-    <h2>Get in Touch</h2>
-    <p>Reach out to us for support, appointments, or collaboration inquiries.</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="patient-form.html">Book an Appointment</a>
+</nav>
 
-    <p><strong>Email:</strong> <a href="mailto:contact@doctorathome.com">contact@doctorathome.com</a></p>
-    <p><strong>Phone:</strong> +1 (587) 555-1234</p>
-    <p><strong>Address:</strong> Calgary, Alberta, Canada</p>
-  </div>
+<div class="contact">
+  <h2>Get in Touch</h2>
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
 
-  <footer>
-    <p>&copy; 2025 DoctorAtHome. All rights reserved.</p>
-  </footer>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="How can we help you?"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 DoctorAtHome. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
-
