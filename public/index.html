@@ -5,13 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DoctorAtHome - Quality Healthcare at Your Doorstep</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f5f9ff;
+      color: #333;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(90deg, rgba(0,120,215,0.9), rgba(0,191,165,0.9)), 
+                  url('https://images.unsplash.com/photo-1580281657521-3898a2a2c4b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Navigation */
+    nav {
+      text-align: center;
+      background-color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0078d7;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfa5;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffffff 40%, #e6f0ff);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #0078d7;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #0078d7, #00bfa5);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #005fa3, #009e8f);
+    }
+
+    /* Services Section */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 60px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      flex: 1 1 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #0078d7;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    footer {
+      text-align: center;
+      background: #0078d7;
+      color: white;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>DoctorAtHome</h1>
-    <p>Your trusted online healthcare partner</p>
+    <p>Your trusted healthcare partner, anytime, anywhere</p>
   </header>
 
   <nav>
@@ -19,30 +157,30 @@
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="patient-form.html">Book an Appointment</a> <!-- ✅ Updated text -->
+    <a href="patient-form.html">Book an Appointment</a>
   </nav>
 
-  <div class="container">
-    <section class="hero">
-      <h1>Healthcare, Simplified</h1>
-      <p>Book online consultations, home visits, and lab tests all from the comfort of your home. We’re redefining healthcare for modern life.</p>
-      <a href="services.html" class="btn">Explore Services</a>
-      <a href="patient-form.html" class="btn" style="margin-left:10px;">Book an Appointment</a> <!-- ✅ Updated button -->
-    </section>
+  <section class="hero">
+    <h1>Healthcare, Simplified</h1>
+    <p>Book online consultations, home visits, and lab tests — all from the comfort of your home. Your health is our priority.</p>
+    <a href="patient-form.html" class="btn">Book an Appointment</a>
+  </section>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Online Consultations</h3>
-        <p>Speak with licensed doctors securely via video call — no waiting rooms, no hassle.</p>
-      </div>
-      <div class="card">
-        <h3>Home Visits</h3>
-        <p>Our doctors and nurses can visit you at home for personalized care when you need it.</p>
-      </div>
-      <div class="card">
-        <h3>Lab Tests</h3>
-        <p>Book lab tests from your couch and have samples collected at your doorstep.</p>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Online Consultation">
+      <h3>Online Consultations</h3>
+      <p>Speak with licensed doctors securely via video call — no waiting rooms, no hassle.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320389.png" alt="Home Visits">
+      <h3>Home Visits</h3>
+      <p>Our healthcare professionals provide personalized care in the comfort of your home.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320342.png" alt="Lab Tests">
+      <h3>Lab Tests</h3>
+      <p>Book lab tests from your couch and have samples collected right at your doorstep.</p>
     </div>
   </div>
 
