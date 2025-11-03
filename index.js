@@ -80,3 +80,52 @@ app.get('/admin/patients', async (req, res) => {
 app.listen(port, () => {
   console.log(`🚀 DoctorAtHome app running on port ${port}`);
 });
+
+
+// Admin route with basic password protection
+app.get('/admin/patients', async (req, res) => {
+  const auth = req.query.auth;
+
+  // Simple password check (set in Azure App Settings)
+  if (auth !== process.env.ADMIN_PASSWORD) {
+    return res.send(`
+      <h2 style="font-family: Arial; text-align: center;">🔒 Admin Login</h2>
+      <form method="get" action="/admin/patients" style="text-align: center;">
+        <input type="password" name="auth" placeholder="Enter admin password" style="padding:8px;" required />
+        <button type="submit" style="padding:8px 12px;">Login</button>
+      </form>
+    `);
+  }
+
+  try {
+    const result = await pool.query('SELECT * FROM patients ORDER BY id DESC');
+    let html = `
+      <h1 style="font-family: Arial; color: #0078d7; text-align:center;">Patient Submissions</h1>
+      <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 90%; margin:auto;">
+        <tr style="background-color: #f2f2f2;">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>City</th>
+          <th>Symptoms</th>
+          <th>Consultation Type</th>
+          <th>Created At</th>
+        </tr>`;
+    result.rows.forEach(p => {
+      html += `<tr>
+        <td>${p.id}</td>
+        <td>${p.full_name}</td>
+        <td>${p.contact}</td>
+        <td>${p.city || ''}</td>
+        <td>${p.symptoms || ''}</td>
+        <td>${p.consultation_type || ''}</td>
+        <td>${p.created_at}</td>
+      </tr>`;
+    });
+    html += `</table>`;
+    res.send(html);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error fetching patient data.');
+  }
+});
